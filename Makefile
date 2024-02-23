@@ -1,6 +1,7 @@
 INCLUDE_DIR = include
 SRC_DIR = src
 OBJ_DIR = bin
+APP_NAME = gpt4terminal
 
 CFLAGS = -Wall -Wpedantic
 LIBS = -lcurl -lcjson
@@ -20,3 +21,10 @@ $(OBJ_DIR):
 
 clean:
 	rm -fr $(OBJ_DIR) 
+
+install: all
+	cp $(OBJ_DIR)/main /usr/bin/$(APP_NAME)
+
+uninstall:
+	rm /usr/bin/$(APP_NAME)
+    
