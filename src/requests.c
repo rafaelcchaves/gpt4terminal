@@ -4,8 +4,6 @@
 #include <curl/curl.h>
 #include "requests.h"
 
-static char REQUEST_ERROR[CURL_ERROR_SIZE];
-
 size_t write_callback(void* incoming_data, size_t size_member, size_t q_members, void* response_memory){
     size_t real_size = size_member * q_members;
     struct ResponseMemory *memory = (struct ResponseMemory *) response_memory;
