@@ -3,7 +3,7 @@ SRC_DIR = src
 OBJ_DIR = bin
 
 CFLAGS = -Wall -Wpedantic
-LIBS = -lcurl
+LIBS = -lcurl -lcjson
 CC = gcc
 SRCS = $(wildcard $(SRC_DIR)/*.c)
 OBJS = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRCS))
