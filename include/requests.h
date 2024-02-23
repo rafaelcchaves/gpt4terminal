@@ -1,6 +1,8 @@
 #ifndef REQUESTS_H
 #define REQUESTS_H
 
+#include <curl/curl.h>
+
 static char REQUEST_ERROR[CURL_ERROR_SIZE];
 
 struct ResponseMemory{
