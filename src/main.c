@@ -39,19 +39,18 @@ int saveKey(char* key, int len){
 
 int main(int argc, char**argv){
     if(argc == 1){
-	printf("Olá eu sou o gpt4terminal!\n\n");
-	printf("Para fazer uma consulta ao gpt use o seguinte comando:" );
-	printf("\'gpt4terminal \"pergunta...\"'.\n");
-	printf("Gostaria de configurar sua API key?(s/n)");
+	printf("To make a query use the following command:" );
+	printf("\'gpt4terminal \"Query question\"'.\n");
+	printf("Do you want to configure your OpenAI Key?(y/n)");
 	char option = getchar();
-	if(option == 's'){
-	    printf("Informe a sua Key para proseguir:");
+	if(option == 'y' || option == 'Y'){
+	    printf("Enter your OpenAI Key:");
 	    char key[128];
 	    scanf("%s", key);
 	    if(saveKey(key, 128)){
-		printf("Key configurada!\n");
+		printf("Configuration done!\n");
 	    }else{
-		printf("Ocorreu um erro na tentativa de configuração.\n");
+		printf("An error has occurred.\n");
 	    }
 	}
 	return 0;
@@ -60,14 +59,15 @@ int main(int argc, char**argv){
     char content_type[64], key[128], auth[256];
     
     if(getKey(key, 128) == 0){
-	printf("Api Key não encontrada. Informe a sua chave para proseguir:");
+	printf("OpenAI Key not found! To continue enter your Key: ");
+	char key[128];
 	scanf("%s", key);
 	if(saveKey(key, 128)){
-	    printf("Key configurada!\n");
+	    printf("Configuration done!\n");
 	}else{
-	    printf("Ocorreu um erro na tentativa de configuração.\n");
+	    printf("An error has occurred.\n");
 	    return 0;
-	}	
+	}
     }
     sprintf(content_type, "Content-Type: application/json");
     sprintf(auth, "Authorization: Bearer %s", key);
