@@ -37,7 +37,7 @@ sudo make uninstall
 
 4.Using:
 
-Before using the appication you have to configure your Api Key from OPENAI. To do this, Run `gpt4terminal`.
+Before using the application you have to configure your Api Key from OPENAI. To do this, Run `gpt4terminal`.
 
 Now you can make a query using the follow command:
 
