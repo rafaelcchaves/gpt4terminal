@@ -39,13 +39,8 @@ sudo make uninstall
 
 Before using the appication you had to configure your Api Key from OPENAI. To do this, Run `gpt4terminal`.
 
-![Configure OpenAI Key](docs/images/configure_api_key.png)
-
-
 Now you can make a query using the follow command:
 
 ```
   $ gpt4terminal "Hello World"
 ```
-![Query](docs/images/query.png)
-
