@@ -6,11 +6,10 @@ This guide explains how to install and use gpt4terminal, a tool to interact with
 ### Prerequisites
 
 * **Dependencies:**
-    * `build-essential`
-    * `libcjson-dev` 
-    * `libcurl4-openssl-dev` 
-
-    **Note:** Install dependencies using your package manager (e.g., `apt-get`, `yum`).
+  
+```bash
+sudo apt install build-essential libcjson-dev libcurl4-openssl-dev
+```
 
 ### Installation
 
