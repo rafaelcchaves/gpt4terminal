@@ -17,7 +17,7 @@ This guide explains how to install and use gpt4terminal, a tool to interact with
 1. Clone the repository:
 
 ```bash
-git clone [https://github.com/rafaelcchaves/gpt4terminal.git](https://github.com/rafaelcchaves/gpt4terminal.git)
+git clone https://github.com/rafaelcchaves/gpt4terminal.git
 ```
 
 2. Build and Install:
